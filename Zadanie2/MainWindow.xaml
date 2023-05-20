@@ -7,6 +7,32 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Пример" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock Text="Число x1" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10" />
+        <TextBlock Text="Число y1" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10" />
+        <TextBlock Text="Число x2" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10" />
+        <TextBlock Text="Число y2" Grid.Row="4" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10" />
+        <TextBlock x:Name="TextBlockAnswer" Text="Ответ: " Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10" />
+        <TextBox x:Name="TbNumberx1" Grid.Row="1" Grid.Column="1" VerticalContentAlignment="Center" Padding="10 0" BorderThickness="1" />
+        <TextBox x:Name="TbNumbery1"  Grid.Row="2" Grid.Column="1" VerticalContentAlignment="Center" Padding="10 0" BorderThickness="1" />
+        <TextBox x:Name="TbNumberx2"  Grid.Row="3" Grid.Column="1" VerticalContentAlignment="Center" Padding="10 0" BorderThickness="1" />
+        <TextBox x:Name="TbNumbery2"  Grid.Row="4" Grid.Column="1" VerticalContentAlignment="Center" Padding="10 0" BorderThickness="1" />
+        <StackPanel Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center" >
+            <Button x:Name="BtnOK" Content="OK" Width="80" Height="24" Margin="3" Background="#FF3985B0" Foreground="White" Click="BtnOKClick" />
+            <Button x:Name="BtnCancel" Content="Cancel" Width="80" Height="24" Margin="3" Background="#FF3985B0" Foreground="White" Click="BtnCancelClick" />
+        </StackPanel>
     </Grid>
 </Window>

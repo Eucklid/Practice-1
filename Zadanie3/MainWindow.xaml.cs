@@ -24,5 +24,33 @@ namespace Zadanie3
         {
             InitializeComponent();
         }
+        private void BtnCancelClick(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+        private void BtnOKClick(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                double x = Convert.ToDouble(TbNumberX.Text);
+                double a = Convert.ToDouble(TbNumberA.Text);
+                double y = Convert.ToDouble(TbNumberY.Text);
+                double b = Convert.ToDouble(TbNumberB.Text);
+                double xa = a / x;
+                double yb = b / y;
+                double how = xa / yb;
+                TextBlockAnswer.Text = $"Ответ:\n1 кг шоколадных конфет стоит = {xa:f2}\n" +
+                    $"1 кг ирисок стоит = {yb:f2}\n" +
+                    $"Шоколадные конфеты дороже ирисок в {how:f1} раз(а)";
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Введены не корректные данные");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }
